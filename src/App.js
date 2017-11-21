@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DataTable from './DataTable.js';
+import NavigationBar from './NavigationBar.js';
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+        <NavigationBar/>
         <DataTable data={this.state.data} major={this.state.major}/>
       </div>
     );
