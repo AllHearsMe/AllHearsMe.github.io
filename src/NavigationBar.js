@@ -18,6 +18,9 @@ class NavigationBar extends Component {
 						<FormControl type="text" placeholder="Search" onChange={this.props.handleSearch}/>
 					</FormGroup>
 				</Navbar.Form>
+				<Navbar.Link pullRight>
+					<span><a href='https://ywc15.ywc.in.th' target='_blank'>Enter Site</a></span>
+				</Navbar.Link>
 			</Navbar>
 		);
 	}
