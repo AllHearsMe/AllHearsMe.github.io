@@ -21,7 +21,6 @@ class App extends Component {
     return (
       <div>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
         <NavigationBar major={this.state.major} majors={majors} handleSelect={this.handleSelect} handleSearch={this.handleSearch}/>
         <br/><br/><br/>
         <DataTable data={this.state.data} major={this.state.major} keyword={this.state.keyword}/>
