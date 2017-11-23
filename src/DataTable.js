@@ -12,12 +12,10 @@ class DataTable extends Component {
 	nameFormatter = (cell, row) => (row.firstName + ' ' + row.lastName);
 	render() {
     return (
-			<div>
-				<BootstrapTable data={this.props.data.filter(this.dataFilter)} options={this.sortOptions} bordered striped hover>
-					<TableHeaderColumn dataField='interviewRef' width="200" isKey dataSort>Ref. No</TableHeaderColumn>
-					<TableHeaderColumn dataField='firstName' width="200" dataFormat={this.nameFormatter}>Name</TableHeaderColumn>
-				</BootstrapTable>
-			</div>
+			<BootstrapTable data={this.props.data.filter(this.dataFilter)} options={this.sortOptions} bordered striped hover>
+				<TableHeaderColumn dataField='interviewRef' width="120" isKey dataSort>Ref. No</TableHeaderColumn>
+				<TableHeaderColumn dataField='firstName' width="120" dataFormat={this.nameFormatter}>Name</TableHeaderColumn>
+			</BootstrapTable>
     );
   }
 }
