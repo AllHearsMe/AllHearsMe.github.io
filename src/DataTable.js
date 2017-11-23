@@ -13,8 +13,8 @@ class DataTable extends Component {
 	render() {
     return (
 			<BootstrapTable data={this.props.data.filter(this.dataFilter)} options={this.sortOptions} bordered striped hover>
-				<TableHeaderColumn dataField='interviewRef' width="120" isKey dataSort>ID</TableHeaderColumn>
-				<TableHeaderColumn dataField='firstName' width="120" dataFormat={this.nameFormatter}>Name</TableHeaderColumn>
+				<TableHeaderColumn dataField='interviewRef' width="60" isKey dataSort>ID</TableHeaderColumn>
+				<TableHeaderColumn dataField='firstName' width="80" dataFormat={this.nameFormatter}>Name</TableHeaderColumn>
 			</BootstrapTable>
     );
   }
