@@ -7,7 +7,7 @@ ctx = c.getContext( '2d' ),
 
 opts = {
 	
-	range: 180,
+	range: 360,
 	baseConnections: 3,
 	addedConnections: 5,
 	baseSize: 5,
@@ -40,7 +40,7 @@ opts = {
 	depth: 250,
 	focalLength: 250,
 	vanishPoint: {
-		x: w / 2,
+		x: w / 4,
 		y: h / 2
 	}
 },
