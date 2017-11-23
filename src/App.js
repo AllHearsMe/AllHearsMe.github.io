@@ -26,8 +26,13 @@ class App extends Component {
   scrollToBody = (event) => {this.body.scrollIntoView({behavior: 'smooth', block: 'start'})};
   render() {
     return (
-      <div>
+      <div style={{
+        backgroundImage: 'url(ep_naturalblack.png)',
+        backgroundSize: 'cover',
+        overflow: 'hidden'
+      }}>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+        {/* <img src='ep_naturalblack.png' style={{position: 'absolute', width: '100%', height: '100%', top: '0', left: '0'}}/> */}
         <NavigationBar
           major={this.state.major}
           majors={majors}
