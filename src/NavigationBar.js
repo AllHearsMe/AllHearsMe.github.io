@@ -16,7 +16,7 @@ class NavigationBar extends Component {
 					</Nav>
 					<Navbar.Form pullLeft>
 						<FormGroup>
-							<FormControl type="text" placeholder="Search" onChange={this.props.handleSearch}/>
+							<FormControl type="text" placeholder="Search" onChange={this.props.handleSearch} onFocus={this.props.handleFocus}/>
 						</FormGroup>
 					</Navbar.Form>
 					<Navbar.Text pullRight>
