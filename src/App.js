@@ -16,14 +16,27 @@ class App extends Component {
       .then((resp) => resp.json())
       .then((resp) => {this.setState({data: resp})});
   }
-  handleSelect = (selectedKey) => this.setState({major: selectedKey});
-  handleSearch = (event) => this.setState({keyword: event.target.value});
+  handleSelect = (selectedKey) => {
+    this.setState({major: selectedKey});
+    this.scrollToBody(selectedKey);
+  };
+  handleSearch = (event) => {
+    this.setState({keyword: event.target.value});
+  };
+  scrollToBody = (event) => {this.body.scrollIntoView({behavior: 'smooth', block: 'start'})};
   render() {
     return (
       <div>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-        <NavigationBar major={this.state.major} majors={majors} handleSelect={this.handleSelect} handleSearch={this.handleSearch}/>
+        <NavigationBar
+          major={this.state.major}
+          majors={majors}
+          handleSelect={this.handleSelect}
+          handleSearch={this.handleSearch}
+          handleFocus={this.scrollToBody}
+          />
         <Header/>
+        <div ref={(b) => {this.body = b}} style={{height: '50px'}}/>
         <Body data={this.state.data} major={this.state.major} keyword={this.state.keyword}/>
       </div>
     );
