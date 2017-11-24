@@ -41,7 +41,7 @@ class App extends Component {
           handleFocus={this.scrollToBody}
           />
         <Header/>
-        <div ref={(b) => {this.body = b}} style={{height: '50px'}}/>
+        <div ref={(b) => {this.body = b}} style={{height: '50px', background: 'linear-gradient(rgba(17,17,17,1), rgba(17,17,17,0))', margin: '0px'}}/>
         <Body data={this.state.data} major={this.state.major} keyword={this.state.keyword}/>
       </div>
     );
