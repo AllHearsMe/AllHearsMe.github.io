@@ -9,6 +9,7 @@ class NavigationBar extends Component {
 					<Navbar.Brand>
 						YWC15 Candidates
 					</Navbar.Brand>
+      		<Navbar.Toggle />
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav bsStyle="pills" activeKey={this.props.major} onSelect={this.props.handleSelect} pullLeft>
