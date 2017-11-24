@@ -7,7 +7,7 @@ class Body extends Component {
 	render() {
 		return <div style={{minHeight: window.innerHeight}}>
         <Grid>
-          <Col xs={6} style={{backgroundColor: 'white'}}>
+          <Col xs={12} md={6} style={{backgroundColor: 'white'}}>
             <DataTable data={this.props.data} major={this.props.major} keyword={this.props.keyword}/>
           </Col>
           {/* <Col xs={4} xsPush={1} style={{backgroundColor: 'white'}}>
