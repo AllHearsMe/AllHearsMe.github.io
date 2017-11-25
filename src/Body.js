@@ -14,7 +14,7 @@ class Body extends Component {
               <DataTable data={this.props.data} major={this.props.major} keyword={this.props.keyword}/>
             </Panel>
           </Col>
-          <Col xs={4} xsPush={1}>
+          <Col xs={12} md={4} mdPush={1}>
             <SideTable major={this.props.major}/>
           </Col>
           
