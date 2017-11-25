@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import MyUtils from './MyUtils.js'
 
 const assignments = {
 	content: <span>
@@ -32,7 +33,7 @@ class SideTable extends Component {
 	render() {
 		return <div>
 			  <ListGroup>
-					<ListGroupItem header={"การบ้านสาขา " + this.props.major.charAt(0).toUpperCase() + this.props.major.slice(1)}>{assignments[this.props.major]}</ListGroupItem>
+					<ListGroupItem header={"การบ้านสาขา " + MyUtils.capitalize(this.props.major)}>{assignments[this.props.major]}</ListGroupItem>
 					{/* <ListGroupItem header="Heading 2" href="#">Linked item</ListGroupItem>
 					<ListGroupItem header="Heading 3" bsStyle="danger">Danger styling</ListGroupItem> */}
 				</ListGroup>

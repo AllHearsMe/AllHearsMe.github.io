@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem, FormGroup, FormControl } from 'react-bootstrap';
+import MyUtils from './MyUtils.js'
 
 class NavigationBar extends Component {
 	render() {
@@ -13,7 +14,7 @@ class NavigationBar extends Component {
 				</Navbar.Header>
 				<Navbar.Collapse>
 					<Nav bsStyle="pills" activeKey={this.props.major} onSelect={this.props.handleSelect} pullLeft>
-						{this.props.majors.map((x) => (<NavItem eventKey={x}>{x.charAt(0).toUpperCase() + x.slice(1)}</NavItem>))}
+						{this.props.majors.map((x) => (<NavItem eventKey={x}>{MyUtils.capitalize(x)}</NavItem>))}
 					</Nav>
 					<Navbar.Form pullLeft>
 						<FormGroup>
