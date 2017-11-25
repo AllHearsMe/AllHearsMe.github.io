@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import Countdown from 'react-countdown-now';
 import MyUtils from './MyUtils.js'
 
 const assignments = {
@@ -29,6 +30,14 @@ const assignments = {
 		</span>
 };
 
+const countdownRenderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    return 'การสัมภาษณ์เริ่มแล้ว';
+  } else {
+    return <span>อีก {hours} ชั่วโมง {minutes} นาที {seconds} วินาที</span>;
+  }
+};
+
 class SideTable extends Component {
 	render() {
 		return <div>
@@ -37,7 +46,9 @@ class SideTable extends Component {
 						{assignments[this.props.major]}
 					</ListGroupItem>
 					<ListGroupItem header="วันเวลาสัมภาษณ์">
-
+						<p><b>อาทิตย์ 26 พฤศจิกายน 2560</b></p>
+						<p>รอบเช้า 9:00 - 12:00 (<Countdown date={"November, 26, 2017 09:00:00"} renderer={countdownRenderer}/>)</p>
+						<p>รอบบ่าย 13:00 - 16:00 (<Countdown date={"November, 26, 2017 13:00:00"} renderer={countdownRenderer}/>)</p>
 					</ListGroupItem>
 					<ListGroupItem header="สถานที่สัมภาษณ์">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.345164537327!2d100.5322980029482!3d13.727706913135389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2c6097395d%3A0x53a7db086a3d0191!2sC.+P.+Tower%2C+Khwaeng+Silom%2C+Khet+Bang+Rak%2C+Krung+Thep+Maha+Nakhon+10500!5e0!3m2!1sen!2sth!4v1511607151356" frameborder="0" style={{border: 0}} allowfullscreen></iframe>
