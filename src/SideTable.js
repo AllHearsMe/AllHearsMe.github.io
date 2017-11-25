@@ -33,9 +33,15 @@ class SideTable extends Component {
 	render() {
 		return <div>
 			  <ListGroup>
-					<ListGroupItem header={"การบ้านสาขา " + MyUtils.capitalize(this.props.major)}>{assignments[this.props.major]}</ListGroupItem>
-					{/* <ListGroupItem header="Heading 2" href="#">Linked item</ListGroupItem>
-					<ListGroupItem header="Heading 3" bsStyle="danger">Danger styling</ListGroupItem> */}
+					<ListGroupItem header={"การบ้านสาขา " + MyUtils.capitalize(this.props.major)}>
+						{assignments[this.props.major]}
+					</ListGroupItem>
+					<ListGroupItem header="วันเวลาสัมภาษณ์">
+
+					</ListGroupItem>
+					<ListGroupItem header="สถานที่สัมภาษณ์">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1190.345164537327!2d100.5322980029482!3d13.727706913135389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f2c6097395d%3A0x53a7db086a3d0191!2sC.+P.+Tower%2C+Khwaeng+Silom%2C+Khet+Bang+Rak%2C+Krung+Thep+Maha+Nakhon+10500!5e0!3m2!1sen!2sth!4v1511607151356" frameborder="0" style={{border: 0}} allowfullscreen></iframe>
+					</ListGroupItem>
 				</ListGroup>
 		</div>
 	}
